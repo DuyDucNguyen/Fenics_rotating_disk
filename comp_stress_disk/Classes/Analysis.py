@@ -2,17 +2,13 @@ import dolfin as df
 import numpy as np
 import matplotlib.pyplot as plt
 
-# TODO: add Rext
 
-class Solution(): 
 
-class Sigma_r(Solution):
-    
+
 
 simu_obj = -1
 
 class Analysis():
-
     def load(self):
         '''
         load H5 file and read u, sigma_r, sigma_theta

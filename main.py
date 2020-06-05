@@ -22,6 +22,8 @@ mesh_obj = DiskMesh(Rint, Rext, Rholes, res)
 mesh = mesh_obj.create()
 
 
+
+
 # ======
 # Material Object
 # ======
@@ -43,9 +45,28 @@ sim1 = Simulation(mesh_obj = mesh_obj,
 #sim1.run()
 
 
+from comp_stress_disk.Classes.Sigma_r import Sigma_r
+from comp_stress_disk.Classes.Sigma_theta import Sigma_theta
+from comp_stress_disk.Classes.Sigma_vm import Sigma_vm
+
+#sigma_r = Solution(sim1, 'sigma_r')
+sigma_r = Sigma_r(sim1)
+#sigma_r.plot()
+X, Y = sigma_r.measure_line()
+sigma_r.plot_line()
+
+sigma_theta = Sigma_theta(sim1)
+sigma_theta.plot_line()
+
+sigma_vm = Sigma_vm(sim1)
+sigma_vm.plot_line()
+
+quit()
+
+
 ana1 = Analysis(sim1)
 #ana1.load()
-#ana1.plot_line(ana1.sigma_r)
+ana1.plot_line(ana1.sigma_r)
 
 
 
@@ -92,5 +113,3 @@ sim3 = Simulation(mesh_obj = mesh_obj,
 
 
 #TODO: Disk Object
-
-

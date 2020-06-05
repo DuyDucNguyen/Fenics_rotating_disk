@@ -8,9 +8,9 @@ from .define_markers import define_markers
 # cartesian coordinate (x, y) 
 
 def comp_axisymmetric_dirichlet(mat_obj, mesh_obj, bc, omega, save_path):
-    E = mat_obj.E 
-    rho = mat_obj.rho 
-    nu = mat_obj.nu 
+    E = mat_obj.E
+    rho = mat_obj.rho
+    nu = mat_obj.nu
 
     mesh = mesh_obj.create()
     Rext = mesh_obj.Rext
