@@ -3,6 +3,9 @@ from comp_stress_disk.Classes.DiskMesh import DiskMesh
 from comp_stress_disk.Classes.Material import Material
 from comp_stress_disk.Classes.Simulation import Simulation
 from comp_stress_disk.Classes.Analysis import Analysis
+from comp_stress_disk.Classes.Sigma_r import Sigma_r
+from comp_stress_disk.Classes.Sigma_theta import Sigma_theta
+from comp_stress_disk.Classes.Sigma_vm import Sigma_vm
 import dolfin as df
 import matplotlib.pyplot as plt
 import math
@@ -45,27 +48,9 @@ sim1 = Simulation(mesh_obj = mesh_obj,
                   omega = omega, 
                   save_path = 'Simulation_CF/'
                   )
-sim1.run()
+#sim1.run()
 
 
-
-
-
-
-
-quit()
-
-
-
-
-
-
-
-
-
-from comp_stress_disk.Classes.Sigma_r import Sigma_r
-from comp_stress_disk.Classes.Sigma_theta import Sigma_theta
-from comp_stress_disk.Classes.Sigma_vm import Sigma_vm
 
 #sigma_r = Solution(sim1, 'sigma_r')
 sigma_r = Sigma_r(sim1)
