@@ -38,11 +38,29 @@ mat_obj = Material(E, nu, rho)
 
 #TODO: Simulation Object
 sim1 = Simulation(mesh_obj = mesh_obj, 
-                  mat_obj = mat_obj, 
-                  bc = 'CF', 
+                  mat_obj = mat_obj,
+                  axisymmetric = False,
+                  heat = False,
+                  bc = 'CF',
                   omega = omega, 
-                  save_path = 'Simulation_CF/')
-#sim1.run()
+                  save_path = 'Simulation_CF/'
+                  )
+sim1.run()
+
+
+
+
+
+
+
+quit()
+
+
+
+
+
+
+
 
 
 from comp_stress_disk.Classes.Sigma_r import Sigma_r

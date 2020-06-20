@@ -100,8 +100,6 @@ def comp_axisymmetric_dirichlet(mat_obj, mesh_obj, bc, omega, save_path):
     df.File(save_path + 'displacement.pvd') << u
 
 
-
-
     # compute stresses
     sigma_r_pro = df.project(sigma_r(u), V)
     sigma_r_pro.rename('sigma_r [Pa]', 'sigma_r [Pa]')
@@ -129,6 +127,7 @@ def comp_axisymmetric_dirichlet(mat_obj, mesh_obj, bc, omega, save_path):
     rfile.close()
 
 
+    '''
     # Load solution
     U = df.Function(V)
     Sig_r = df.Function(V)
@@ -140,6 +139,7 @@ def comp_axisymmetric_dirichlet(mat_obj, mesh_obj, bc, omega, save_path):
     input_file.read(Sig_theta, "sigma_theta")
     input_file.read(Vm_stress, "von_mises_stress")
     input_file.close()
+    '''
 
     return 
 
