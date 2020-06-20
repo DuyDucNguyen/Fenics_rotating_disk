@@ -6,15 +6,15 @@ Nhat Binh Trinh NGUYEN: email: nhatbinhtrinh@gmail.com
 
 
 ### Models
-1) axisymmetry + heat <br>
+1) axisymmetry + heat <br>  
 2) full model + heat <br>
 
 
 ### Examples: 
 <p align="center">
-    <img src="Pictures/sigma_r.png" alt="3d_mode_cc" width="40%"/>
-    <img src="Pictures/sigma_theta.png" alt="3d_mode_cc" width="40%"/>
-    <img src="Pictures/von_misses_stress.png" alt="3d_mode_cc" width="40%"/>
+    <img src="Pictures/sigma_r.png" alt="sigma_r" width="40%"/>
+    <img src="Pictures/sigma_theta.png" alt="sigma_theta" width="40%"/>
+    <img src="Pictures/von_misses_stress.png" alt="von_misses_stress" width="40%"/>
     <p align="center">Line measurements of stresses of axisymmetry and heat. </p>
 </p>
 
